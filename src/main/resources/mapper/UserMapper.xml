@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kefan.serverofitclub.dao.UserDao">
+    <insert id="insertUser" parameterType="com.kefan.serverofitclub.model.User">
+      INSERT ignore INTO user(username, password, studentnumber, mobile, gender, qq, address) VALUES
+      (#{userName},#{password},#{studentNumber},#{mobile},#{gender},#{qq},#{address})
+    </insert>
+    
+    
+    <select id="allUser" resultType="com.kefan.serverofitclub.model.User">
+        SELECT * FROM user
+    </select>
+
+    <select id="allOnlineUser" resultType="com.kefan.serverofitclub.model.User">
+        SELECT * FROM user WHERE state = 0
+    </select>
+
+
+</mapper>

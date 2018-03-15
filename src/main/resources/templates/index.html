@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>IT俱乐部报修平台</title>
+<!-- metatags-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all"/><!--style_sheet-->
+<link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"><!--online_fonts-->
+<link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet"><!--online_fonts-->
+<link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet"><!--online_fonts-->
+</head>
+<body>
+<div class="w3ls-main">
+<div class="w3ls-form">
+<form action="/bill" method="post">
+<ul class="fields">
+	<li>	
+		<label class="w3ls-opt">姓名<span class="w3ls-star"> * </span></label>
+		<div class="w3ls-name">	
+			<input type="text" name="userName"  required="" value="A"/>
+		</div>
+	</li>
+	<li>
+		<label class="w3ls-opt">学号<span class="w3ls-star"> * </span></label>
+		<div class="w3ls-name">
+			<input type="text" name="studentNumber" required="" value="A"/>
+		</div>
+	</li>
+	<li>
+		<label class="w3ls-opt">性别<span class="w3ls-star"> * </span></label>
+		<div class="w3ls-name">
+			<input type="text" name="gender" required="" value="A"/>
+		</div>
+	</li>
+	<li>
+		<label class="w3ls-opt">地址 <span class="w3ls-star"> * </span> </label>
+		<div class="w3ls-name">
+				<input type="text" name="address" required="" value="A"/>
+		</div>
+	</li>
+	<li>
+		<label class="w3ls-opt">QQ<span class="w3ls-star"> * </span></label>
+			<span class="w3ls-text w3ls-name">
+				<input type="text" name="qq" required="" value="A"/>
+			</span>
+	</li>
+	<li>
+		<label class="w3ls-opt">手机号码<span class="w3ls-star"> * </span></label>
+		<span class="w3ls-text w3ls-name">
+				<input type="text" name="mobile" required="" value="A"/>
+			</span>
+	</li>
+	<div class="input">
+		<label class="w3ls-opt1">问题描述<span> ?</span></label>
+		<span class="w3ls-input"><textarea  name="text"  placeholder="请尽量详细描述"></textarea></span>
+	</div>
+</ul>
+<div class="clear"></div>
+	<div class="w3ls-btn">
+		<input type="submit" value="提交">
+	</div>
+</form>
+</div>
+</div>
+<footer>&copy; 2018 IT俱乐部. All Rights Reserved | Design by 柯帆</footer>
+</body>
+</html>

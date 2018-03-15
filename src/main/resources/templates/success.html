@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<title>报修成功</title>
+<!-- metatags-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all"/><!--style_sheet-->
+<link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"><!--online_fonts-->
+<link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet"><!--online_fonts-->
+<link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet"><!--online_fonts-->
+
+</head>
+<body>
+<div class="w3ls-main">
+
+<ul style="text-align: center">
+
+	<li>
+		<label class="w3ls-opt1" style="margin-top: 500px;margin-bottom: 50px">系统为你分配了一位维修员,快来联系他吧</label>
+	</li>
+	<li>	
+		<label class="w3ls-opt1" style="margin-top: 50px">姓名: </label><label class="w3ls-opt1" th:text="${user.userName}"></label>
+	</li>
+	<li>
+		<label class="w3ls-opt1" style="margin-top: 50px">QQ: </label><label class="w3ls-opt1" th:text="${user.qq}"></label>
+	</li>
+	<li>
+		<label class="w3ls-opt1" style="margin-top: 50px">手机号码: </label><label class="w3ls-opt1" th:text="${user.mobile}"></label>
+	</li>
+	<li>
+		<label class="w3ls-opt1" style="margin-top: 50px">地址: </label><label class="w3ls-opt1" th:text="${user.address}"></label>
+	</li>
+
+
+</ul>
+</div>
+<footer>&copy; 2018 IT俱乐部. All Rights Reserved | Design by 柯帆</footer>
+</body>
+</html>
