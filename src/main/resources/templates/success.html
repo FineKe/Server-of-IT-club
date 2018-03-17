@@ -21,21 +21,33 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 <ul style="text-align: center">
 
-	<li>
-		<label class="w3ls-opt1" style="margin-top: 500px;margin-bottom: 50px">系统为你分配了一位维修员,快来联系他吧</label>
+	<li style="margin-top: 50px;margin-bottom: 50px;">
+		<label class="w3ls-opt1">系统为你分配了一位维修员,快来联系他吧</label>
 	</li>
-	<li>	
-		<label class="w3ls-opt1" style="margin-top: 50px">姓名: </label><label class="w3ls-opt1" th:text="${user.userName}"></label>
+	<li style="margin-top: 50px">
+		<label class="w3ls-opt1" >姓名: </label><label class="w3ls-opt1" th:text="${user.userName}"></label>
 	</li>
-	<li>
+	<li style="margin-top: 50px">
 		<label class="w3ls-opt1" style="margin-top: 50px">QQ: </label><label class="w3ls-opt1" th:text="${user.qq}"></label>
-	</li>
-	<li>
+	</li >
+	<li style="margin-top: 50px">
 		<label class="w3ls-opt1" style="margin-top: 50px">手机号码: </label><label class="w3ls-opt1" th:text="${user.mobile}"></label>
 	</li>
-	<li>
+	<li style="margin-top: 50px">
 		<label class="w3ls-opt1" style="margin-top: 50px">地址: </label><label class="w3ls-opt1" th:text="${user.address}"></label>
 	</li>
+
+
+	<li style="margin-top: 50px">
+		<label class="w3ls-opt1">如果您觉得我们的帮助有用并且有点小小的感恩，那么扫描下方的二维捐助我们吧</label>
+	</li>
+	<li style="margin-top: 100px">
+		<img id="ali" src="/static/images/alipay.png" th:alt="支付宝" th:width="150" height="150" style="text-align: left">
+		<img src="/static/images/wechat.png" th:alt="微信" th:width="150" height="150" style="text-align: right">
+	</li>
+	<li>
+	</li>
+
 
 
 </ul>

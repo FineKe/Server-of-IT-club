@@ -28,5 +28,10 @@ public interface UserService {
     public List<User> allOnlineUser();
 
 
-
+    /**
+     * 通过 手机号码/学号 ，密码查找用户
+     * @param user
+     * @return
+     */
+    public User findUserByUserNameAndPassword(User user);
 }

@@ -15,5 +15,7 @@
         SELECT * FROM user WHERE state = 0
     </select>
 
-
+    <select id="findUserByUserNameAndPassword" parameterType="com.kefan.serverofitclub.model.User" resultType="com.kefan.serverofitclub.model.User">
+        SELECT id,mobile,qq,studentnumber,address,gender,username FROM user WHERE studentnumber = #{userName} AND password = #{password} OR mobile = #{userName} AND password = #{password}
+    </select>
 </mapper>

@@ -12,6 +12,8 @@ public interface UserDao {
 
     public List<User> allOnlineUser();
 
+    public User findUserByUserNameAndPassword(User user);
+
 
 
 }
