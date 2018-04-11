@@ -19,4 +19,8 @@
     <insert id="insertUserBill" parameterType="map">
         INSERT INTO user_bill(userid,billid) VALUES (#{userId},#{billId})
     </insert>
+    
+    <select id="getBills" parameterType="long" resultType="com.kefan.serverofitclub.model.Bill">
+        SELECT * FROM bill WHERE id IN (SELECT billid FROM user_bill WHERE userid = #{id} AND state > 0 )
+    </select>
 </mapper>

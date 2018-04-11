@@ -52,9 +52,11 @@ public class UserController extends BaseRestController{
 
         //从数据库中查找相应的user
         User temp = userService.findUserByUserNameAndPassword(user);
+
         if (temp == null) {
             return result(CodeConstant.REQUEST_FAILED,null,"用户名或密码输入错误");
         }
+
 
         //token字符串
         String tokenString =TokenHelper.createToken(temp);
@@ -72,4 +74,5 @@ public class UserController extends BaseRestController{
         map.put("user",temp);
        return result(CodeConstant.REQUEST_SUCCESS,map,"登录成功");
     }
+
 }

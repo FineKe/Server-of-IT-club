@@ -15,4 +15,6 @@ public interface BillDao {
     public int insertUserBill(Map<String,Object> map);
 
     public Bill findBillId(Bill bill);
+
+    public List<Bill> getBills(long id);
 }

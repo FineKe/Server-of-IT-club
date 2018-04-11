@@ -6,6 +6,7 @@ import com.kefan.serverofitclub.service.BillService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -33,5 +34,10 @@ public class BillServiceImpl implements BillService
     @Override
     public int findBillId(Bill bill) {
         return billDao.findBillId(bill).getId();
+    }
+
+    @Override
+    public List<Bill> getBills(long userId) {
+        return billDao.getBills(userId);
     }
 }

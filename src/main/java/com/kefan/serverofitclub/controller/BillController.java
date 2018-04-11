@@ -4,28 +4,25 @@ import com.kefan.serverofitclub.model.Bill;
 import com.kefan.serverofitclub.model.User;
 import com.kefan.serverofitclub.service.BillService;
 import com.kefan.serverofitclub.service.UserService;
+import com.kefan.serverofitclub.token.CommonToken;
 import jdk.nashorn.internal.ir.ReturnNode;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import java.util.*;
 
 @Controller
-public class BillController {
+public class BillController extends BaseController{
 
     @Resource
     private BillService billService;
 
     @Resource
     private UserService userService;
-
-    //存储在线用户集合
-    private static volatile List<User> users = new ArrayList<>();
-
-
 
 
     @GetMapping("/index")
@@ -63,12 +60,14 @@ public class BillController {
         //防止用户多次提交
         if (billService.findSameBill(bill)) {
             modelAndView.setViewName("failed");
+            modelAndView.addObject("msg","你已经报修过了哦！");
             return modelAndView;
         }
 
         //数据插入是否成功
         if (billService.insertBill(bill) == 0) {
             modelAndView.setViewName("failed");
+            modelAndView.addObject("msg","sorry,报修失败!");
             return modelAndView;
         }
 
@@ -82,21 +81,16 @@ public class BillController {
 
         if (billService.insertUserBill(map)==0) {
             modelAndView.setViewName("failed");
+            modelAndView.addObject("msg","sorry,报修失败!");
             return modelAndView;
         }
 
         modelAndView.setViewName("success");
         modelAndView.addObject(user);
-
         return modelAndView;
     }
 
 
-    /**
-     * 对外暴露方法
-     * @return
-     */
-    public static List<User> getUsers() {
-        return users;
-    }
+
+
 }
